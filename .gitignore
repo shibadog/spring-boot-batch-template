@@ -4,3 +4,6 @@
 
 # Gradle
 .gradle
+
+# General
+out/
