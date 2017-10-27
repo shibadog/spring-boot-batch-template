@@ -31,9 +31,9 @@ public class BatchCommandLineRunner implements CommandLineRunner {
         getConcreteController(concreteControllerName).execute(args);
     }
 
-    private FunctionalController getConcreteController(String concreteController) {
+    private FunctionalController getConcreteController(String concreteControllerName) {
         try {
-            return context.getBean(uncapitalize(concreteController), FunctionalController.class);
+            return context.getBean(uncapitalize(concreteControllerName), FunctionalController.class);
         } catch (BeanNotOfRequiredTypeException e) {
             throw new RuntimeException("The specified controller isn't implementation of FunctionalController.", e);
         } catch (BeansException e) {
