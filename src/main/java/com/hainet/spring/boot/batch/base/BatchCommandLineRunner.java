@@ -25,7 +25,7 @@ public class BatchCommandLineRunner implements CommandLineRunner {
     @Override
     public void run(String... args) {
         if (concreteControllerName == null || concreteControllerName.length() == 0) {
-            throw new RuntimeException("起動対象を指定して下さい。(e.g. --controller=ConcreteController)");
+            throw new RuntimeException("Specify a target controller. (e.g. --controller=ConcreteController)");
         }
 
         getConcreteController(concreteControllerName).execute(args);
@@ -35,9 +35,9 @@ public class BatchCommandLineRunner implements CommandLineRunner {
         try {
             return context.getBean(uncapitalize(concreteController), FunctionalController.class);
         } catch (BeanNotOfRequiredTypeException e) {
-            throw new RuntimeException("起動対象がBatchControllerの実装ではありません。", e);
+            throw new RuntimeException("The specified controller isn't implementation of FunctionalController.", e);
         } catch (BeansException e) {
-            throw new RuntimeException("起動対象がSpringコンテナにBean登録されていません。", e);
+            throw new RuntimeException("The specified controller isn't in Spring container.", e);
         }
     }
 
