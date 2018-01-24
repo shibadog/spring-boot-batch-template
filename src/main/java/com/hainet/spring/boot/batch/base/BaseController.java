@@ -1,21 +1,23 @@
 package com.hainet.spring.boot.batch.base;
 
-public abstract class BaseController implements FunctionalController {
+public abstract class BaseController implements ControllerInterface {
 
     @Override
-    public void execute(String... args) {
-        startup();
-        int result = run();
-        shutdown();
+    public void execute(final String[] args) {
+        this.startup();
+        final int result = this.run();
+        this.shutdown();
+
+        System.out.println("Result: " + result);
     }
 
     private void startup() {
-        // 前処理
+        System.out.println("This is startup section.");
     }
 
     public abstract int run();
 
     private void shutdown() {
-        // 後処理
+        System.out.println("This is shutdown section.");
     }
 }
