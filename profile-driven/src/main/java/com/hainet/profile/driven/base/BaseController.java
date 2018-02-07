@@ -1,4 +1,4 @@
-package com.hainet.spring.boot.batch.base;
+package com.hainet.profile.driven.base;
 
 public abstract class BaseController implements ControllerInterface {
 

@@ -1,4 +1,4 @@
-package com.hainet.spring.boot.batch;
+package com.hainet.profile.driven;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

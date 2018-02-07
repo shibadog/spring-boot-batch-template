@@ -1,4 +1,4 @@
-package com.hainet.spring.boot.batch;
+package com.hainet.profile.driven;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

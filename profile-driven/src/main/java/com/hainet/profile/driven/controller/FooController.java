@@ -1,6 +1,6 @@
-package com.hainet.spring.boot.batch.controller;
+package com.hainet.profile.driven.controller;
 
-import com.hainet.spring.boot.batch.base.BaseController;
+import com.hainet.profile.driven.base.BaseController;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Controller;
