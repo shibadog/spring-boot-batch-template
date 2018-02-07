@@ -9,7 +9,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 @ActiveProfiles("foo")
-public class SpringBootBatchApplicationTest {
+public class ProfileDrivenApplicationTest {
 
     @Test
     public void contextLoads() {
