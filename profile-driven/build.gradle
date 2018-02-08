@@ -30,3 +30,5 @@ dependencies {
 
     compileOnly('org.projectlombok:lombok')
 }
+
+bootRun.systemProperties = System.properties
